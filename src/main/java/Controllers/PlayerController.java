@@ -7,11 +7,15 @@ public class PlayerController {
 
     PlayerService playerService;
 
+    public PlayerController(PlayerService playerService) {
+        this.playerService=playerService;
+    }
+
     //creating a player initially by the admin
     public String createPlayer(String name, String type, String team){
         PlayerDto playerDto=new PlayerDto(name,type,team);
-        boolean created =playerService.createPlayer(playerDto);
-        return created?"Created" : " Could not create";
+        Integer createdId =playerService.createPlayer(playerDto);
+        return "Player created with Player Id "+createdId;
     }
 
 

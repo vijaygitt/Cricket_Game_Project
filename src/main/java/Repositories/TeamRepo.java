@@ -1,22 +1,23 @@
 package Repositories;
 
 import Entities.Team;
+import Payloads.TeamDto;
 
 import java.util.List;
 
 public class TeamRepo{
 
-    private static List<Team> teamList;
+    private List<Team> teamList;
 
-    public static List<Team> getTeamList() {
+    public List<Team> getTeamList() {
         return teamList;
     }
 
-    public static void setTeamList(List<Team> teamList) {
-        TeamRepo.teamList = teamList;
+    public void save(Team team){
+        this.teamList.add(team);
     }
 
-    public static Team findByTeam(Integer teamId){
+    public Team findByTeam(Integer teamId){
         for(Team team : teamList) {
             if (team.getId() == teamId)
                 return team;

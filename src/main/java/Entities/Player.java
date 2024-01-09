@@ -10,16 +10,16 @@ public class Player {
     private String teamName;
     private PlayerStats playerStats;
 
-    public Player(String name,String type, String teamName) {
-        this.id = IdService.createPlayerId();
-        this.name = name;
-        this.type=type;
-        this.teamName = teamName;
-        this.playerStats = new PlayerStats();
-    }
+
+    //this.id = IdService.createPlayerId();
+
 
     public int getId() {
         return this.id;
+    }
+
+    public void setId(int id){
+        this.id=id;
     }
 
     public String getName() {
