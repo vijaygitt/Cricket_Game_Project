@@ -4,19 +4,19 @@ import java.util.List;
 
 public class Match {
 
-    private List<Integer> idOfPlayingTeams;
+    private List<java.lang.Integer> idOfPlayingTeams;
     private List<Player> playersOfTeam1;
     private List<Player> playersOfTeam2;
 
-    public Match(List<Integer> idOfPlayingTeams) {
+    public Match(List<java.lang.Integer> idOfPlayingTeams) {
         this.idOfPlayingTeams=idOfPlayingTeams;
     }
 
-    public List<Integer> getIdOfPlayingTeams() {
+    public List<java.lang.Integer> getIdOfPlayingTeams() {
         return idOfPlayingTeams;
     }
 
-    public void setIdOfPlayingTeams(List<Integer> idOfPlayingTeams) {
+    public void setIdOfPlayingTeams(List<java.lang.Integer> idOfPlayingTeams) {
         this.idOfPlayingTeams=idOfPlayingTeams;
     }
 

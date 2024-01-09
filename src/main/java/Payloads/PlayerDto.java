@@ -1,8 +1,8 @@
-package Entities;
+package Payloads;
 
-import Services.IdService;
+import Entities.PlayerStats;
 
-public class Player {
+public class PlayerDto {
 
     private int id;
     private String name;
@@ -10,20 +10,33 @@ public class Player {
     private String teamName;
     private PlayerStats playerStats;
 
-    public Player(String name,String type, String teamName) {
-        this.id = IdService.createPlayerId();
+    public PlayerDto(String name, String type, String teamName) {
         this.name = name;
-        this.type=type;
+        this.type = type;
         this.teamName = teamName;
-        this.playerStats = new PlayerStats();
+    }
+
+    public PlayerDto(int id, String name, String type, String teamName) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.teamName = teamName;
+    }
+
+    public PlayerDto(int id, String name, String type, String teamName, PlayerStats playerStats) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.teamName = teamName;
+        this.playerStats = playerStats;
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -39,7 +52,7 @@ public class Player {
     }
 
     public String getTeamName() {
-        return this.teamName;
+        return teamName;
     }
 
     public void setTeamName(String teamName) {
@@ -47,7 +60,7 @@ public class Player {
     }
 
     public PlayerStats getPlayerStats() {
-        return this.playerStats;
+        return playerStats;
     }
 
     public void setPlayerStats(PlayerStats playerStats) {

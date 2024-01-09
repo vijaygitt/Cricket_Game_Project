@@ -8,12 +8,12 @@ public class Team {
 
     private int id;
     private String name;
-    private List<Player> players;
+    private List<Integer> idOfPlayers;
 
-    public Team(String name, List<Player> players) {
+    public Team(String name, List<Integer> idOfPlayers) {
         this.id = IdService.createTeamId();
         this.name = name;
-        this.players = players;
+        this.idOfPlayers = idOfPlayers;
     }
 
     public int getId() {
@@ -28,11 +28,11 @@ public class Team {
         this.name = name;
     }
 
-    public List<Player> getPlayers() {
-        return players;
+    public List<Integer> getIdOfPlayers() {
+        return idOfPlayers;
     }
 
-    public void setPlayers(List<Player> players) {
-        this.players = players;
+    public void setIdOfPlayers(List<Integer> idOfPlayers) {
+        this.idOfPlayers = idOfPlayers;
     }
 }
