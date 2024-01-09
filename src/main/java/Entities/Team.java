@@ -10,14 +10,15 @@ public class Team {
     private String name;
     private List<Integer> idOfPlayers;
 
-    public Team(String name, List<Integer> idOfPlayers) {
-        this.id = IdService.createTeamId();
-        this.name = name;
-        this.idOfPlayers = idOfPlayers;
-    }
+
+    Team(){}
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

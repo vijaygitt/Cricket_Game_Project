@@ -10,6 +10,9 @@ public class PlayerDto {
     private String teamName;
     private PlayerStats playerStats;
 
+    public PlayerDto() {
+    }
+
     public PlayerDto(String name, String type, String teamName) {
         this.name = name;
         this.type = type;

@@ -5,6 +5,7 @@ import Entities.Team;
 import Exceptions.TeamNotFoundException;
 import Payloads.TeamDto;
 import Repositories.TeamRepo;
+import Services.IdService;
 import Services.TeamService;
 import org.modelmapper.ModelMapper;
 
@@ -14,8 +15,8 @@ import java.util.Optional;
 
 public class TeamServiceImpl implements TeamService {
 
-    private ModelMapper modelMapper;
-    private TeamRepo teamRepo;
+    private final ModelMapper modelMapper;
+    private final TeamRepo teamRepo;
 
     public TeamServiceImpl(ModelMapper modelMapper, TeamRepo teamRepo) {
         this.modelMapper = modelMapper;
@@ -25,7 +26,9 @@ public class TeamServiceImpl implements TeamService {
     @Override
     public Integer createTeam(TeamDto teamDto) {
         Team team=modelMapper.map(teamDto,Team.class);
+        team.setId(IdService.createTeamId());
         this.teamRepo.save(team);
+
         return team.getId();
     }
 

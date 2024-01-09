@@ -5,7 +5,7 @@ import Services.PlayerService;
 
 public class PlayerController {
 
-    PlayerService playerService;
+    private PlayerService playerService;
 
     public PlayerController(PlayerService playerService) {
         this.playerService=playerService;

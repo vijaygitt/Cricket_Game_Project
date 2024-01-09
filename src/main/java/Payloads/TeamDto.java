@@ -8,6 +8,10 @@ public class TeamDto {
     private String name;
     private List<Integer> idOfPlayers;
 
+    public TeamDto(){
+
+    }
+
     public TeamDto(String name, List<Integer> idOfPlayers) {
         this.name = name;
         this.idOfPlayers = idOfPlayers;

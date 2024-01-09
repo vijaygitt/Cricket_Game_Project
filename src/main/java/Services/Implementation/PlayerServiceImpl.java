@@ -12,8 +12,8 @@ public class PlayerServiceImpl implements PlayerService {
 
 
 
-    private ModelMapper modelMapper;
-    private PlayerRepo playerRepo;
+    private final ModelMapper modelMapper;
+    private final PlayerRepo playerRepo;
 
     public PlayerServiceImpl(ModelMapper modelMapper, PlayerRepo playerRepo) {
         this.modelMapper = modelMapper;

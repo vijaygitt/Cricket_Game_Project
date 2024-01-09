@@ -3,18 +3,19 @@ package Repositories;
 import Entities.Team;
 import Payloads.TeamDto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TeamRepo{
 
-    private List<Team> teamList;
+    List<Team> teamList=new ArrayList<>();
 
     public List<Team> getTeamList() {
         return teamList;
     }
 
     public void save(Team team){
-        this.teamList.add(team);
+        teamList.add(team);
     }
 
     public Team findByTeam(Integer teamId){
